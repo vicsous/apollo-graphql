@@ -21,7 +21,7 @@ const { ApolloServer } = require('apollo-server-express');
 
 /* Apollo Server setup */
 const server = new ApolloServer(
-    {   
+    {   introspection: true, playground: true,
         typeDefs, 
         resolvers,
         context: async () => {
